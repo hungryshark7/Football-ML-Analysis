@@ -35,6 +35,11 @@ def main():
     print("Processing frames...")
     print("Frame processing complete")
 
+    #Draw Ouput
+
+    ##Draw Object Tracks
+    output_video_frames = tracker.draw_annotations(output_video_frames, tracks)
+
     # Save the processed video
     print("Saving video...")
     save_video(output_video_frames, output_video_path)

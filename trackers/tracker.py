@@ -97,7 +97,7 @@ class Tracker :
             center =(x_center, y2),
             axes =(int(width), int(0.35*width)),
             angle=0.0,
-            startAngle= 45,
+            startAngle= -45,
             endAngle= 235,
             color=color,
             thickness=2,
@@ -122,6 +122,8 @@ class Tracker :
 
             for track_id, player in player_dict.items():
                 frame = self.draw_ellipse(frame,player["bbox"],(0,0,255), track_id)
-             
+
+            output_video_frames.append(frame)
+                     
 
         return output_video_frames
